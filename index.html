@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>臺北市嚴重車禍事故因素分析</title>
+    <link rel="stylesheet" href="vendor/css/c3.min.css">
+    <!-- <script src="http://d3js.org/d3.v3.min.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/css/psd3.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script> -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+    <script src="vendor/js/c3.js"></script>
+    <script src="vendor/js/psd3.min.js"></script>
+    <script src="js/chart.js"></script>
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="vendor/css/stylish-portfolio.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand">
+                <a href="#top" onclick=$( "#menu-close").click();>Start Bootstrap</a>
+            </li>
+            <li>
+                <a href="#top" onclick=$( "#menu-close").click();>Home</a>
+            </li>
+            <li>
+                <a href="#about" onclick=$( "#menu-close").click();>About</a>
+            </li>
+            <li>
+                <a href="#services" onclick=$( "#menu-close").click();>Analysis</a>
+            </li>
+            <li>
+                <a href="#portfolio" onclick=$( "#menu-close").click();>Result</a>
+            </li>
+            <li>
+                <a href="#contact" onclick=$( "#menu-close").click();>Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- Header -->
+    <header id="top" class="header">
+        <div class="text-vertical-center">
+            <h1>臺北市嚴重車禍事故因素分析</h1>
+            <h3>使用104年度臺北市a1a2車禍資料集</h3>
+            <br>
+            <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
+        </div>
+    </header>
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>資料集介紹</h2>
+                    <p class="lead">此次分析的資料集來自於臺北市政府資料開放平台，
+                        <br>由臺北市政府警察局交通警察大隊提供104年度臺北市a1a2車禍資料集
+                        <a href="http://data.taipei/opendata/datalist/datasetMeta?oid=2f238b4f-1b27-4085-93e9-d684ef0e2735"></a>
+                    </p>
+                    <p>A1類指造成人員當場或二十四小時內死亡之交通事故</p>
+                    <p>A2類指造成人員受傷或超過二十四小時死亡之交通事故</p>
+                    <p>A3類指僅有車輛財物受損之交通事故</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- Services -->
+    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
+    <section id="services" class="services bg-primary">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h2>不同條件分析</h2>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-cloud fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>氣候</strong>
+                                </h4>
+                                <p>分析不同氣候下車禍比例</p>
+                                <a href="#weather" class="btn btn-light">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-compass fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>下雨</strong>
+                                </h4>
+                                <p>車禍是否下雨天較多</p>
+                                <a href="#weather2" class="btn btn-light">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-flask fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>年齡</strong>
+                                </h4>
+                                <p>分析年齡與車禍發生之關係</p>
+                                <a href="#age" class="btn btn-light">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-shield fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>性別</strong>
+                                </h4>
+                                <p>分析性別與車禍發生之關係</p>
+                                <a href="#sex" class="btn btn-light">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row (nested) -->
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- Callout -->
+    <aside class="callout">
+        <div class="text-vertical-center">
+            <h1>分析結果</h1>
+        </div>
+    </aside>
+    <!-- Portfolio -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h2>My Analysis</h2>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-xs-12" style="border-bottom: 1px #c4c4c4 solid; padding-top: 50px;">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="portfolio-item">
+                                        <div id="weather"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="portfolio-item">
+                                        <h2>氣候</h2>
+                                        <p>晴天時所發生的車禍佔所有車禍數量約68.0%</p>
+                                        <p>可以點擊底下的方框來決定想看哪些氣候所發生的比例。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12" style="border-bottom: 1px #c4c4c4 solid; padding-top: 50px;">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="portfolio-item">
+                                        <h2>下雨</h2>
+                                        <p>下雨天所佔的車禍僅約佔總車禍的12.8%</p>
+                                        <p>因此車禍並不是多發生於下雨天，晴天也應多注意。</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="portfolio-item">
+                                        <div id="weather2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12" style="border-bottom: 1px #c4c4c4 solid; padding-top: 50px;">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="portfolio-item">
+                                        <div id="age"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="portfolio-item">
+                                        <h2>年齡</h2>
+                                        <p>18~24歲年齡區間較小，但仍為發生車禍比例最大的區間。</p>
+                                        <p>可能與該年齡層的駕車習慣及剛拿到駕照較為不熟悉有關。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12" style="padding-top: 50px;">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="portfolio-item">
+                                        <h2>性別</h2>
+                                        <p>在各年齡層男性出車禍比例均比女性多。</p>
+                                        <button type="button" class="btn btn-primary" id="group">將男女合併</button>
+                                        <button type="button" class="btn btn-primary" id="pie">轉為圓餅圖</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="portfolio-item">
+                                        <div id="sex"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row (nested) -->
+                    <!-- <a href="#" class="btn btn-dark">View More Items</a> -->
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- Call to Action -->
+    <aside class="call-to-action bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h3>聯絡方式</h3>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <!-- Map -->
+    <section id="contact" class="map">
+       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14462.474961761249!2d121.5416515!3d25.0130679!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x90db5e44ee29f455!2z5Y-w54Gj5ZyL56uL5Y-w54Gj56eR5oqA5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1497169606813" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h4><strong>臺北市嚴重車禍事故因素分析</strong>
+                    </h4>
+                    <br>
+                    <hr class="small">
+                    <p class="text-muted">Copyright &copy; pyk 2017</p>
+                </div>
+            </div>
+        </div>
+        <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+    </footer>
+    <!-- jQuery -->
+    <!-- <script src="vendor/js/jquery.js"></script> -->
+    <!-- Bootstrap Core JavaScript -->
+    <!-- <script src="vendor/js/bootstrap.min.js"></script> -->
+    <!-- Custom Theme JavaScript -->
+    <script>
+    // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+    //#to-top button appears after scrolling
+    var fixed = false;
+    $(document).scroll(function() {
+        if ($(this).scrollTop() > 250) {
+            if (!fixed) {
+                fixed = true;
+                // $('#to-top').css({position:'fixed', display:'block'});
+                $('#to-top').show("slow", function() {
+                    $('#to-top').css({
+                        position: 'fixed',
+                        display: 'block'
+                    });
+                });
+            }
+        } else {
+            if (fixed) {
+                fixed = false;
+                $('#to-top').hide("slow", function() {
+                    $('#to-top').css({
+                        display: 'none'
+                    });
+                });
+            }
+        }
+    });
+    // Disable Google Maps scrolling
+    // See http://stackoverflow.com/a/25904582/1607849
+    // Disable scroll zooming and bind back the click event
+    var onMapMouseleaveHandler = function(event) {
+        var that = $(this);
+        that.on('click', onMapClickHandler);
+        that.off('mouseleave', onMapMouseleaveHandler);
+        that.find('iframe').css("pointer-events", "none");
+    }
+    var onMapClickHandler = function(event) {
+            var that = $(this);
+            // Disable the click handler until the user leaves the map area
+            that.off('click', onMapClickHandler);
+            // Enable scrolling zoom
+            that.find('iframe').css("pointer-events", "auto");
+            // Handle the mouse leave event
+            that.on('mouseleave', onMapMouseleaveHandler);
+        }
+        // Enable map zooming with mouse scroll when the user clicks the map
+    $('.map').on('click', onMapClickHandler);
+    </script>
+</body>
+
+</html>
